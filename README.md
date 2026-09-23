@@ -18,3 +18,26 @@ For the current release, run:
 
 ```text
 WiZ-Control-3.4.5-Setup.exe
+```
+
+## Screenshots
+
+### Home
+
+![WiZ Control Home](docs/screenshots/Home.png)
+
+### Scenes
+
+![WiZ Control Scenes](docs/screenshots/Scenes.png)
+
+### Settings
+
+![WiZ Control Settings](docs/screenshots/Settings.png)
+
+### Information
+
+![WiZ Control Information](docs/screenshots/Information.png)
+
+### Device management
+
+![WiZ Control Device Management](docs/screenshots/Devices.png)
