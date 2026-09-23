@@ -1,46 +1,20 @@
 # WiZ Control
 
-A fast local Windows desktop controller for WiZ smart lights.
+![Latest Release](https://img.shields.io/github/v/release/superglazkov/WiZ-Control?display_name=tag)
+![License](https://img.shields.io/github/license/superglazkov/WiZ-Control)
+![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue)
 
-**Developer / maintainer:** [Superglazkov](https://github.com/Superglazkov)
+WiZ Control is a Windows desktop application for controlling WiZ smart lights directly over the local network.
 
-## Features
+It provides multi-device control, scenes, local discovery, tray mode, persistent device ordering and automatic IP recovery for saved devices.
 
-- Multiple WiZ bulbs and LED strips in one app.
-- Manual device add by IPv4 address.
-- On-demand LAN discovery with **Scan devices**.
-- Device identity stored by MAC address with transparent DHCP/IP recovery.
-- Control one device or **All devices**.
-- Power, brightness, built-in scenes and custom colors.
-- Brightness step of 5%.
-- Scene cards with visual scene colors.
-- Up to 8 favorite scenes shown at the top of Home.
-- Compact expandable device information.
-- Minimize to Windows system tray.
-- Optional **Start with Windows**, launching silently in the tray.
-- Adaptive health checks: faster while the window is open, low-frequency in the background.
-- English-only release build and Windows x64 packaging.
+## Download
 
-## Privacy and networking
+Download the latest Windows installer from:
 
-WiZ Control talks directly to WiZ devices on the local network over UDP. Device discovery runs once on the first launch when no devices have been saved; afterwards, new devices are scanned only on demand, except for background recovery of already saved MAC addresses after an IP address changes.
+**[GitHub Releases](https://github.com/superglazkov/WiZ-Control/releases/latest)**
 
-## Windows build
+For the current release, run:
 
-```powershell
-npm install --legacy-peer-deps
-npm run typecheck
-npm run build:win
-```
-
-The installer is created in `dist/`.
-
-## Releases
-
-Create a tag such as `v3.4.5`. GitHub Actions will build the Windows x64 installer and attach it to the GitHub Release.
-
-## License
-
-GPL-3.0-only. See `LICENSE` and `NOTICE.md`.
-
-WiZ Control is not affiliated with, maintained by, or endorsed by WiZ / Signify.
+```text
+WiZ-Control-3.4.5-Setup.exe
