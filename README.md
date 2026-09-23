@@ -19,7 +19,7 @@ Download the latest Windows installer from:
 For the current release, run:
 
 ```text
-WiZ-Control-3.4.5-Setup.exe
+WiZ-Control-<version>-Setup.exe
 ```
 
 ## Screenshots
