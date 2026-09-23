@@ -4,6 +4,8 @@
 ![License](https://img.shields.io/github/license/superglazkov/WiZ-Control)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue)
 
+## Why WiZ Control?
+
 WiZ Control is an open-source Windows desktop app for controlling Philips WiZ smart lights directly over the local network.
 
 It supports multiple WiZ bulbs and light strips, All devices group control, scenes, LAN discovery, tray mode, device ordering and MAC-based IP recovery.
@@ -19,7 +21,7 @@ Download the latest Windows installer from:
 For the current release, run:
 
 ```text
-WiZ-Control-<version>-Setup.exe
+WiZ-Control-<version vX.Y.Z>-Setup.exe
 ```
 
 ## Screenshots
