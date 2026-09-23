@@ -1,0 +1,57 @@
+electronLanguages: [en-US]
+asar: true
+compression: maximum
+appId: com.superglazkov.wizcontrol
+productName: WiZ Control
+directories:
+  buildResources: build
+files:
+  - '!**/node_modules/**/{README,README.md,CHANGELOG,CHANGELOG.md}'
+  - '!**/node_modules/**/{test,tests,__tests__}/**'
+  - '!img/**'
+  - '!**/*.map'
+  - "!**/.vscode/*"
+  - "!tests/**"
+  - "!src/*"
+  - "!electron.vite.config.{js,ts,mjs,cjs}"
+  - "!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}"
+  - "!{.env,.env.*,.npmrc,pnpm-lock.yaml}"
+  - "!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}"
+extraResources:
+  - from: resources/tray.png
+    to: tray.png
+asarUnpack:
+  - resources/**
+win:
+  executableName: WiZ Control
+nsis:
+  artifactName: WiZ-Control-${version}-Setup.${ext}
+  shortcutName: WiZ Control
+  uninstallDisplayName: WiZ Control
+  createDesktopShortcut: always
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+dmg:
+  artifactName: WiZ-Control-${version}-Setup.${ext}
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: electronjs.org
+  category: Utility
+appImage:
+  artifactName: WiZ-Control-${version}-Setup.${ext}
+npmRebuild: false
+publish:
+  provider: github
+  owner: Superglazkov
+  repo: WiZ-Control
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/

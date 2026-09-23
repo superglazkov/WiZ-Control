@@ -1,0 +1,3 @@
+const MAX_DEFAULT_COLORS = 33
+
+export { MAX_DEFAULT_COLORS }

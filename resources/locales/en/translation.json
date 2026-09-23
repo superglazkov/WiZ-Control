@@ -1,0 +1,173 @@
+{
+  "home": {
+    "title": "Home",
+    "subtitle": "Manage your bulbs",
+    "search": "Searching bulbs",
+    "toggle": "Toggle",
+    "edit": {
+      "entry": "Edit name",
+      "title": "Edit bulb name",
+      "label": "New name",
+      "example": "e.g. Living Room"
+    },
+    "delete": {
+      "entry": "Delete",
+      "title": "Delete bulb",
+      "message": "Are you sure you want to delete the bulb"
+    },
+    "add": {
+      "entry": "Add device",
+      "title": "Add device",
+      "example": "192.168.1.34"
+    }
+  },
+  "scenes": {
+    "title": "Scenes",
+    "subtitle": "Customize your lighting",
+    "favorites": "Favorites",
+    "missingFavorites": "You haven't selected any favorites yet. Try selecting one.",
+    "available": "Available",
+    "tags": {
+      "all": "All",
+      "static": "Static",
+      "dynamic": "Dynamic",
+      "custom": "Custom"
+    },
+    "notFound": "No scenes found, try another search term",
+    "search": "Search scenes",
+    "custom": {
+      "fav": "Favorite",
+      "unfav": "Unfavorite",
+      "add": {
+        "entry": "Add custom",
+        "title": "Add custom color",
+        "nameLabel": "Name",
+        "nameExample": "e.g. Red",
+        "colorLabel": "Color"
+      },
+      "edit": {
+        "entry": "Edit",
+        "title": "Edit custom color",
+        "label": "New name",
+        "example": "e.g. Living Room"
+      },
+      "delete": {
+        "entry": "Delete",
+        "title": "Delete custom color",
+        "message": "Are you sure you want to delete the custom color"
+      }
+    },
+    "names": {
+      "warmWhite": "Warm White",
+      "dayLight": "Day Light",
+      "coldWhite": "Cool White",
+      "functional": "Functional",
+      "nightLight": "Night Light",
+      "cozy": "Cozy",
+      "trueColors": "True Colors",
+      "relax": "Relax",
+      "focus": "Focus",
+      "tvTime": "TV Time",
+      "plantGrowth": "Plant Growth",
+      "candleLight": "Candle Light",
+      "pulse": "Pulse",
+      "goldenWhite": "Golden White",
+      "steampunk": "Steampunk",
+      "color": "Color",
+      "fireplace": "Fireplace",
+      "fall": "Fall",
+      "club": "Club",
+      "sunset": "Sunset",
+      "romance": "Romance",
+      "party": "Party",
+      "pastelColors": "Pastel Colors",
+      "spring": "Spring",
+      "summer": "Summer",
+      "forest": "Forest",
+      "jungle": "Jungle",
+      "mojito": "Mojito",
+      "ocean": "Ocean",
+      "deepDive": "Deep Dive",
+      "christmas": "Christmas",
+      "halloween": "Halloween",
+      "progressive": "Progressive",
+      "bedtime": "Bedtime",
+      "wakeUp": "Wake Up"
+    }
+  },
+  "information": {
+    "title": "Information",
+    "subtitle": "Information about your WiZ lighting system",
+    "missing": "No information available. Try connecting to a bulb first.",
+    "moduleName": "Module name",
+    "ip": "IP address",
+    "port": "Port",
+    "mac": "MAC address",
+    "state": "State",
+    "sceneId": "Scene ID",
+    "firmwareVersion": "Firmware version",
+    "homeId": "Home ID",
+    "roomId": "Room ID"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "deleteProfile": {
+      "title": "Delete profile",
+      "button": "Delete",
+      "description": "Are you sure you want to delete your profile? This will delete all your configuration, custom scenes and favorites."
+    },
+    "startWithWindows": {
+      "title": "Start with Windows",
+      "description": "Launch WiZ Control silently in the system tray when you sign in"
+    },
+    "keepRunningInTray": {
+      "title": "Keep running in tray",
+      "description": "Closing the window hides WiZ Control in the system tray instead of exiting"
+    }
+  },
+  "help": {
+    "title": "Help",
+    "version": "Version",
+    "source": "Source code",
+    "author": "Author",
+    "checkUpdates": "Check for updates",
+    "checkingUpdates": "Checking for updates...",
+    "openFolder": "Open program folder",
+    "noUpdates": "No updates available"
+  },
+  "sidebar": {
+    "menu": "Menu",
+    "home": "Home",
+    "scenes": "Scenes",
+    "information": "Information",
+    "settings": "Settings",
+    "help": "Help",
+    "brightness": "Brightness"
+  },
+  "modals": {
+    "add": "Add",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete"
+  },
+  "errors": {
+    "emptyName": "Name cannot be empty",
+    "longName": "Name cannot be longer than 15 characters",
+    "customLongName": "Name cannot be longer than 10 characters",
+    "sameName": "Name cannot be the same as the current name",
+    "emptyIp": "IP address cannot be empty",
+    "longIP": "IP address cannot be longer than 15 characters",
+    "invalidIP": "That doesn't look like a valid IP address"
+  },
+  "tray": {
+    "show": "Show",
+    "quit": "Quit",
+    "toggle": "Toggle Bulb"
+  }
+}

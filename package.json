@@ -1,0 +1,80 @@
+{
+  "name": "wiz_control",
+  "productName": "WiZ Control",
+  "version": "3.4.4",
+  "description": "Local Windows desktop controller for WiZ smart lights",
+  "main": "./out/main/index.js",
+  "author": "Superglazkov",
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/Superglazkov/WiZ-Control",
+  "scripts": {
+    "format": "prettier --write .",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "electron-vite build && electron-builder --mac",
+    "build:linux": "electron-vite build && electron-builder --linux",
+    "test:smoke": "node tests/startup-discovery.cjs && node tests/release-structure.cjs"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/modifiers": "^9.0.0",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@electron-toolkit/preload": "^3.0.2",
+    "@electron-toolkit/utils": "^4.0.0",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@tailwindcss/vite": "^4.1.18",
+    "electron-log": "^5.4.3",
+    "electron-updater": "^6.7.3",
+    "i18next": "^25.7.4",
+    "react": "^19.2.3",
+    "react-i18next": "^16.5.3",
+    "react-icons": "^5.5.0",
+    "react-router": "^7.12.0",
+    "tailwind-animations": "^1.0.1",
+    "tailwindcss": "^4.1.18",
+    "zustand": "^5.0.10"
+  },
+  "devDependencies": {
+    "@electron-toolkit/tsconfig": "^2.0.0",
+    "@types/node": "^25.0.9",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "electron": "^40.0.0",
+    "electron-builder": "^26.4.0",
+    "electron-vite": "^5.0.0",
+    "prettier": "^3.8.0",
+    "react-dom": "^19.2.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^6.0.4"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "electron",
+      "esbuild",
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "electron",
+      "electron-winstaller"
+    ]
+  },
+  "repository": "https://github.com/Superglazkov/WiZ-Control.git",
+  "keywords": [
+    "wiz",
+    "smart-light",
+    "smart-home",
+    "windows",
+    "local-control",
+    "iot"
+  ]
+}

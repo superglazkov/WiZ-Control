@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #3772ff;
+  --color-primary-50: oklch(96.73% 0.015 269.99);
+  --color-primary-100: oklch(94.54% 0.026 266.61);
+  --color-primary-200: oklch(88.22% 0.057 266.64);
+  --color-primary-300: oklch(80.73% 0.096 266.03);
+  --color-primary-400: oklch(71.42% 0.148 265.02);
+  --color-primary-500: oklch(59.63% 0.219 263.82);
+  --color-primary-600: oklch(56% 0.242 263.24);
+  --color-primary-700: oklch(51.19% 0.264 263.23);
+  --color-primary-800: oklch(45.03% 0.229 263.09);
+  --color-primary-900: oklch(35.24% 0.175 262.85);
+  --color-primary-950: oklch(27.68% 0.13 262.15);
+
+  --color-secondary: #3f3f3f;
+  --color-secondary-50: #f2f2f2;
+  --color-secondary-100: #e8e8e8;
+  --color-secondary-200: #cfcfcf;
+  --color-secondary-300: #b0b0b0;
+  --color-secondary-400: #878787;
+  --color-secondary-500: #3f3f3f;
+  --color-secondary-600: #383838;
+  --color-secondary-700: #303030;
+  --color-secondary-800: #262626;
+  --color-secondary-900: #1a1a1a;
+  --color-secondary-950: #000000;
+
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #a1a1aa;
+
+  --color-accent-primary: #FD52A5;
+  --color-accent-secondary: #52FDBA;
+
+  --color-sidebar-bg: #2d2d2e;
+  --color-main-bg: #1e1e1e;
+
+  --color-alert: #e51e31;
+  --color-warning: #FACC15;
+  --color-success: #22C55E;
+}
+
+@import "tailwind-animations";
+
+body {
+  font-family: 'Inter Variable', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Sidebar brightness slider */
+.wiz-brightness-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  height: 22px;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+.wiz-brightness-slider::-webkit-slider-runnable-track {
+  background: var(--color-primary);
+  height: 6px;
+  border-radius: 999px;
+}
+
+.wiz-brightness-slider::-moz-range-track {
+  background: var(--color-primary);
+  height: 6px;
+  border-radius: 999px;
+}
+
+.wiz-brightness-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  background-color: white;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12);
+}
+
+.wiz-brightness-slider::-moz-range-thumb {
+  border: none;
+  background-color: white;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12);
+}
+
+a {
+  -webkit-user-drag: none;
+}
+
+.nonSelectable {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Webkit scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-main-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-500);
+}
