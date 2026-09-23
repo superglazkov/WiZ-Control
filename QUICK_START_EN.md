@@ -1,16 +1,20 @@
-# WiZ Control 3.4.5. Один проект, одна сборка
+# WiZ Control 3.4.5 Quick Start
 
-Этот архив содержит **полный исправленный исходный проект**. В нём нет готового `.exe`, потому что сборку и установщик необходимо проверить на Windows 11.
+WiZ Control is a Windows desktop application for controlling WiZ smart lights directly over the local network.
 
-1. Распакуйте **один раз** в отдельную папку, например `C:\WiZ-Control-3.4.5`. Не распаковывайте исходники внутрь каталога установленного приложения.
-2. Закройте запущенный WiZ Control, включая значок в трее, выбрав **Exit**.
-3. Откройте PowerShell внутри распакованной папки с `package.json` и выполните `./BUILD_WINDOWS.cmd` (в Windows PowerShell используйте `\.\BUILD_WINDOWS.cmd`). Требуется установленный Node.js LTS.
-4. После успешной сборки появится `dist\WiZ-Control-3.4.5-Setup.exe`. Запустите именно этот файл для установки.
-5. У сборки прежний `appId` **com.superglazkov.wizcontrol**. Поверх 3.4.0 установщик должен обновить приложение с тем же именем. Удалять данные профиля при обновлении не нужно.
-6. Проверьте пункты из `VERIFY_RELEASE.md`. **До проверки не публикуйте GitHub Release.**
+## Requirements
 
-Что исправлено относительно присланной 3.4.0. Версия в About берётся из самого приложения. В трее используется отдельная упакованная PNG-иконка. На совершенно пустом профиле выполняется однократный автоматический поиск, а затем остаётся только ручной Scan devices и восстановление уже сохранённых MAC. Бесконечная заглушка поиска заменена отдельным состоянием «ничего не найдено». Удалены испанский перевод и выбор языка, поправлены стартовый размер окна, карточки Home и ползунок в боковой панели. Существующие пресеты, настройки, MAC, режим All devices и переименование устройств сохранены в коде.
+- Windows 10 or Windows 11 x64
+- Node.js 24
+- npm
+- WiZ devices connected to the same local network
 
-При проблемах сборки скопируйте вывод **первой ошибки**, а не удаляйте проект и не начинайте сборку с другого fix-kit.
+## Build on Windows
 
-Проект основан на GPL-3.0 исходниках WizAPP. При публикации сохраняйте LICENSE и NOTICE.md.
+1. Clone or download this repository.
+2. Open PowerShell in the project directory.
+3. Make sure WiZ Control is completely closed, including the tray icon.
+4. Run:
+
+```powershell
+.\BUILD_WINDOWS.cmd
