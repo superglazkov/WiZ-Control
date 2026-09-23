@@ -37,7 +37,7 @@ The installer is created in `dist/`.
 
 ## Releases
 
-Create a tag such as `v3.4.4`. GitHub Actions will build the Windows x64 installer and attach it to the GitHub Release.
+Create a tag such as `v3.4.5`. GitHub Actions will build the Windows x64 installer and attach it to the GitHub Release.
 
 ## License
 

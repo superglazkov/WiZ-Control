@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import DeleteDialog from '@renderer/components/modals/DeleteDialog'
 import { useBulbStore } from '@renderer/context/BulbStore'
+import { getThemePreference, setThemePreference, type ThemePreference } from '@renderer/theme'
 
 type SettingsModalProps = {
   isOpen: boolean
@@ -15,6 +16,7 @@ export default function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
   const { deleteProfile } = useBulbStore()
 
   const [deleteDialog, setDeleteDialog] = useState(false)
+  const [theme, setTheme] = useState<ThemePreference>(getThemePreference)
   const [startWithWindows, setStartWithWindows] = useState(false)
   const [minimizeToTray, setMinimizeToTray] = useState(true)
 
@@ -50,10 +52,19 @@ export default function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
       <article className="flex flex-col gap-4 mt-4">
         <div className="flex items-center justify-between">
           <p>{t('settings.theme.title')}</p>
-          <select className="text-white rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition duration-200 bg-secondary-800">
-            <option>{t('settings.theme.system')}</option>
-            <option>{t('settings.theme.light')}</option>
-            <option>{t('settings.theme.dark')}</option>
+          <select
+            aria-label="Theme"
+            value={theme}
+            onChange={(event) => {
+              const next = event.target.value as ThemePreference
+              setTheme(next)
+              setThemePreference(next)
+            }}
+            className="text-white rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition duration-200 bg-secondary-800"
+          >
+            <option value="system">{t('settings.theme.system')}</option>
+            <option value="light">{t('settings.theme.light')}</option>
+            <option value="dark">{t('settings.theme.dark')}</option>
           </select>
         </div>
 

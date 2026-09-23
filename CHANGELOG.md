@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.4.5
+
+- Fixed Light, Dark and System theme switching and persistence.
+- System theme now follows Windows color-scheme changes while WiZ Control is running.
+- Fixed GitHub Actions release builds so electron-builder builds the installer without trying to publish with a Personal Access Token. GitHub Actions remains responsible for attaching the installer to the Release.
+- Kept all 3.4.4 device ordering, tray, startup and UI behavior.
+
 ## 3.4.4
 
 - Moved **Keep running in tray** from Information to Settings.
